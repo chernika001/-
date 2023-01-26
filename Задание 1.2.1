@@ -1,0 +1,23 @@
+title = input('Введите название вакансии: ')
+description = input('Введите описание вакансии: ')
+experience = input('Введите требуемый опыт работы (лет): ')
+salary_from = input('Введите нижнюю границу оклада вакансии: ')
+salary_to = input('Введите верхнюю границу оклада вакансии: ')
+is_free_schedule = input('Есть ли свободный график (да / нет): ')
+is_premium = input('Является ли данная вакансия премиум-вакансией (да / нет): ')
+
+experience = int(experience)
+salary_from = int(salary_from)
+salary_to = int(salary_to)
+
+dic_ru_to_bool = {'да': True, 'нет': False}
+
+is_free_schedule = dic_ru_to_bool[is_free_schedule.lower()]
+is_premium = dic_ru_to_bool[is_premium.lower()]
+print(f'{title} ({type(title).__name__})\n'
+      f'{description} ({type(title).__name__})\n'
+      f'{experience} ({type(experience).__name__})\n'
+      f'{salary_from} ({type(salary_from).__name__})\n'
+      f'{salary_to} ({type(salary_to).__name__})\n'
+      f'{is_free_schedule} ({type(is_free_schedule).__name__})\n'
+      f'{is_premium} ({type(is_premium).__name__})')
